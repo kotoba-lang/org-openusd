@@ -21,7 +21,7 @@
    Scope is symmetric with the emitter above — the ASCII-text subset only, no binary .usdc/.usdz, no
    composition arcs beyond a `variantSet` block or a `prepend`-style metadata key. See `parse`'s
    docstring for the exact (small, honestly-documented) set of round-trip asymmetries."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (defn- pname [x] (if (keyword? x) (name x) (str x)))   ;; prim/property name (keeps ns colons in strings)
 
