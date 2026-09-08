@@ -6,7 +6,7 @@
    against the real Pixar USD toolchain (usdcat/usdchecker equivalents via `pip install usd-core`),
    see `usd.oracle-test` (ADR-2607101525 D3/D4; this repo has no `bb gate` task)."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [kotoba.usd :as u]))
 
 (deftest values

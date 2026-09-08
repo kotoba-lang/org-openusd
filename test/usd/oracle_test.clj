@@ -12,7 +12,7 @@
   such interpreter is found, so this suite never silently reports 0 assertions
   as a pass in an environment that can't run it — see each test's skip message."
   (:require [clojure.test :refer [deftest is]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.java.io :as io]
             [clojure.java.shell :as shell]
             [kotoba.usd :as u]))
