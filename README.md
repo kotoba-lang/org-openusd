@@ -43,7 +43,7 @@ setup this needs (JVM-only, `.clj` not `.cljc`).
 `usd.core/usda`/`prim` (EDN → USDA text) and `usd.core/parse`/`parse-prim` (USDA text → EDN) are
 inverses over the same shape: `[spec type? name meta? & body]`, where `body` mixes `[:attr type
 name value]`, `[:rel name value]`, `[:variant-set name {variant [body…]}]`, and nested prims. Both
-directions are exercised by golden + round-trip tests in `test/usd/core_test.clj`, including a
+directions are exercised by golden + round-trip tests in `test/usd/core_test.cljk`, including a
 hand-written real-world `.usda` snippet the parser was never generator-fitted against.
 
 ```clojure
@@ -135,8 +135,8 @@ above do not read or write `UsdSkel` prims.
 clojure -M:test
 ```
 
-`test/usd/core_test.clj` is self-referential (string/EDN comparisons against this repo's own
-emitter and parser). `test/usd/oracle_test.clj` (ADR-2607101525 D3/D4) additionally validates
+`test/usd/core_test.cljk` is self-referential (string/EDN comparisons against this repo's own
+emitter and parser). `test/usd/oracle_test.cljk` (ADR-2607101525 D3/D4) additionally validates
 against the real Pixar reference implementation — `tools/usd_oracle.py`, a thin driver around the
 `pxr` Python bindings (`pip install -r tools/requirements.txt`), shelled out to from JVM-only
 tests. Set `USD_ORACLE_PYTHON` to point at a specific interpreter, or install into whatever
