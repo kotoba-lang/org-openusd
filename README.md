@@ -132,7 +132,7 @@ above do not read or write `UsdSkel` prims.
 ## Test
 
 ```sh
-clojure -M:test
+kbb -M:test
 ```
 
 `test/usd/core_test.cljk` is self-referential (string/EDN comparisons against this repo's own
