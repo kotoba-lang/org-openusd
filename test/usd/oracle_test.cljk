@@ -11,7 +11,7 @@
   resolves to for local runs. Skips (not fails) with a clear message when no
   such interpreter is found, so this suite never silently reports 0 assertions
   as a pass in an environment that can't run it — see each test's skip message."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [kotoba.lang.text :as str]
             [clojure.java.io :as io]
             [clojure.java.shell :as shell]

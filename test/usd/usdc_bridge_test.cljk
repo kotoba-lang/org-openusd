@@ -1,7 +1,7 @@
 (ns usd.usdc-bridge-test
   "ADR-2607101525 M3. Requires a python3 with `pxr` importable; skips (with
   a printed reason) otherwise, same convention as usd.oracle-test."
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [usd.usdc-bridge :as bridge]))
 
 (defmacro ^:private deftest-oracle [name & body]
